@@ -43,7 +43,7 @@ app = Flask(__name__) # creating the app                                        
 def posting_song_info_on_the_webpage():                                                                                                                     #
                                                                                                                                                             #
 #################################################             Song Info        ###############################################################              #
-    artists = ["137W8MRPWKqSmrBGDBFSop","3TVXtAsR1Inumwj472S9r4","45PG2L6Fh2XvYL4ONzpdoW"] #list of artist ids from spotify                  #              #
+    artists = ["137W8MRPWKqSmrBGDBFSop","3TVXtAsR1Inumwj472S9r4","64KEffDW9EtZ1y2vBYgq8T"] #list of artist ids from spotify                  #              #
                                                                                                                                              #              #
     selected_artist = artists[randint(0,2)] #selecting random artist                                                                         #              #
                                                                                                                                              #              #
@@ -57,7 +57,8 @@ def posting_song_info_on_the_webpage():                                         
     image_index = randint(0,len(response.json()["tracks"][song_index]["album"]["images"])-1) #index for selectinf random images from list    #              #                                      
     artist_name =response.json()["tracks"][0]["artists"][0]['name'] #name of the artist                                                      #              #
     song_name = response.json()["tracks"][song_index]["name"] #name of the song                                                              #              #
-    song_preview_url =response.json()["tracks"][song_index]["external_urls"]["spotify"] #link for the song                                   #              #
+    song_preview_url =response.json()["tracks"][song_index]["preview_url"] #link for the song                                                #              #
+    print(response.json()["tracks"][song_index]["album"]["href"])                                                                            #              #
     image_url =response.json()["tracks"][song_index]["album"]["images"][image_index]["url"] #link for the images                             #              #
 ##############################################################################################################################################              #
     return render_template("index.html", # sending data to index.html                                                                                       #
