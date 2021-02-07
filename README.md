@@ -6,6 +6,8 @@ Lirbaries to install:
   3. load_dot env and find_env from dotenv: to load and find the .env file which stores keys of the api provided by spotify api.
   4. random: to generate random number
   5. Flask and render_template from flask: to create,run and render the app.
+ 
+ 
  Deploying the app (app.py):
   1. First of all we need to create a developer account in Soptify to get client id and client secret to the api.
   2. create .env file to store client id and client secret.
@@ -19,6 +21,9 @@ Lirbaries to install:
   9. Send a get request with proper endpoints and parameters and headers.
   10. Us the response to extract the information about artist's top track like song's name, preview url,images,etc.
   11. Render these data snd dend it to index.html.
+ 
+ 
+ 
  Problem I faced:
   1. I had an issue with the loging in tot the github via terminal.
       Solution: I disable the two way authentication feature and it solved the issue.
