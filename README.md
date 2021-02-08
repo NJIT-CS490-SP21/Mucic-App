@@ -1,4 +1,4 @@
-# Project1-ajr72
+# Project1-ajr72 Spotify Music Web App
 Music Discovery App
 Lirbaries to install:
   1. Requests: to request data from the api.
