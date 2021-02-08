@@ -1,6 +1,6 @@
 body{
-    background: linear-gradient(-30deg, #b721ff 0%, #21d4fd 100%);
-     
+    
+    animation: myanimation 10s infinite;
 }
 #preview{
     margin-left: 12%;
@@ -39,11 +39,7 @@ body{
 }
 #footer{background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);text-align: center;color: white;height: 45px;position: fixed;left: 0;
   bottom: 0;width: 100%;}
- #logo{
-     height:100px;
-     width:100px;
-     border-radius:50px;
- }
+ 
   h1{
       margin:0px;
   }
@@ -51,4 +47,10 @@ body{
       margin: 0px;
   }
  
- 
+ @keyframes myanimation {
+  0% {background: linear-gradient(-30deg, #b721ff 0%, #21d4fd 100%);}
+  25%{background: linear-gradient(162deg, rgba(255,175,126,1) 0%, rgba(130,50,209,1) 80%, rgba(104,44,228,1) 100%);}
+  50%{background: linear-gradient(125deg, rgba(4,97,203,1) 0%, rgba(16,230,255,1) 80%, rgba(15,228,254,1) 100%);}
+  75%{background: linear-gradient(135deg, rgba(218,27,96,1) 0%, rgba(242,98,34,1) 100%);}
+  100% {background: linear-gradient(124deg, rgba(195,55,100,1) 0%, rgba(41,39,112,1) 100%);}
+}
