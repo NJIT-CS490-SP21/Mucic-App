@@ -34,8 +34,8 @@ This reository have python, css and html files which will dynamically retrive in
         -> command to install : ```pip install flask ```
   
  
- Deploying the app (app.py):
-  1. First of all we need to create a developer account in Soptify to get client id and client secret to the api.
+ Deploying the app (app.py and music.py):
+  1. First of all we need to create a developer account in [Soptify](https://developer.spotify.com/dashboard/login) to get ```CLIENT ID``` and ```CLIENT SECRET``` to the API.
   2. create .env file to store client id and client secret.
   3. authenticate ourself using the client id and client secrete as shown in the documentation.
       For that we need to send post request in proper format and get the access token from the response.
