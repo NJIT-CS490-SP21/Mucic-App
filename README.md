@@ -1,12 +1,16 @@
 # Project1-ajr72 Spotify Music Web App
-Music Discovery App
-Lirbaries to install:
-  1. Requests: to request data from the api.
+This reository have python, css and html files which will dynamically retrive information about a trop track of a perticular randomly chosen artist from a list of 3 artists using Spotify Track API.
+# Lirbaries to install:
+  1.  ```Requests```: to request data from the api.
+     ->command to install : ```pip install requests```
   2. os: to interact with the operating system to get so data like data from .env file and also to provide port number and ip address of the pc to the app.
-  3. load_dot env and find_env from dotenv: to load and find the .env file which stores keys of the api provided by spotify api.
-  4. random: to generate random number
-  5. Flask and render_template from flask: to create,run and render the app.
- 
+    ->``` os``` is a prebuilt library.
+  3. ```load_dot env and find_env from dotenv```: to load and find the .env file which stores keys of the api provided by spotify api.
+      ->command to install: ```pip install python-dotenv```
+  4. ```random```: to generate random number
+     -> it is prebuilt library
+  5. ```Flask and render_template from flask```: to create,run and render the app.
+      -> command to install : ```pip install flask ```
  
  Deploying the app (app.py):
   1. First of all we need to create a developer account in Soptify to get client id and client secret to the api.
