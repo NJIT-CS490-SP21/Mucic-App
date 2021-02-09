@@ -15,7 +15,7 @@ This reository have python, css and html files which will dynamically retrive in
 ## Flask
     Flask is a lightweight WSGI web application framework which will help use to connect our backend with frontend created with html and css.
 ## Spotify Artist API
-    It is a API Provided by Spotify INC, A music providing company to retrive  infromation about a track in ```JSON``` format.
+    It is a API Provided by Spotify INC, A music providing company to retrive  infromation about a track in JSON format.
 # Lirbaries to install:
   1.  ```Requests```: to request data from the api.
      
@@ -52,7 +52,7 @@ This reository have python, css and html files which will dynamically retrive in
   10. Import music.py and Flask library.
   11. Create an app using Flask using ```app = Flask(__name__)``` command.
   12. Set route to ("/") which the root of the route.
-  13. Render these data snd dend it to index.html.
+  13. Render these data send dend it to index.html.
   **Don't forget to add .env file to .gitignore to protect your keys. **
  
  
