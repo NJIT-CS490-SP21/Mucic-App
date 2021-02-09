@@ -1,16 +1,38 @@
 # Project1-ajr72 Spotify Music Web App
 This reository have python, css and html files which will dynamically retrive information about a trop track of a perticular randomly chosen artist from a list of 3 artists using Spotify Track API.
+# Technologies used in this Project:
+  * **HTML**: To create a structure of the webpage.
+  * **CSS**: To give style and design to the webpage.
+  * **Python**: It is programing language which will host the Flask Framewrk.
+  * **Flask Framework**: to create a server and connect backend and frontend.
+  * **Spotify Track API**: To fetch the information about the tack.
+## HTML
+    Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser.
+## CSS
+    Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+## Python
+    Python is an interpreted, high-level and general-purpose programming language. We will use it to create the backend of or Web App.
+## Flask
+    Flask is a lightweight WSGI web application framework which will help use to connect our backend with frontend created with html and css.
+## Spotify Track API
+    It is a API Provided by Spotify INC, A music providing company to retrive  infromation about a track in ```JSON``` format.
 # Lirbaries to install:
   1.  ```Requests```: to request data from the api.
-     ->command to install : ```pip install requests```
+     
+      ->command to install : ```pip install requests```
   2. os: to interact with the operating system to get so data like data from .env file and also to provide port number and ip address of the pc to the app.
-    ->``` os``` is a prebuilt library.
+    
+      ->``` os``` is a prebuilt library.
   3. ```load_dot env and find_env from dotenv```: to load and find the .env file which stores keys of the api provided by spotify api.
-      ->command to install: ```pip install python-dotenv```
+      
+        ->command to install: ```pip install python-dotenv```
   4. ```random```: to generate random number
-     -> it is prebuilt library
+    
+      -> it is prebuilt library
   5. ```Flask and render_template from flask```: to create,run and render the app.
-      -> command to install : ```pip install flask ```
+      
+        -> command to install : ```pip install flask ```
+  
  
  Deploying the app (app.py):
   1. First of all we need to create a developer account in Soptify to get client id and client secret to the api.
