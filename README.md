@@ -64,7 +64,7 @@ This reository have python, css and html files which will dynamically retrive in
       **Solution** : The issue was,  that while generating ssh key and adding to the github I put the wrong repository name. To solve this issue first I remove the original remote orign and than I again added remote origin with the correct repository name. And then I followed the step which I used to initialize the git that i used on first hand.
   3. Whenever I recieved the response in the json format, the response was so messy.
       Solution: I used a chrome extention called ```Awesome JSON Viewer```. So I needed to copy the response which I recieved from the GET request in the text box. And then it will process the resonse and butified it. It was very easy to get a parent node just by clicking the child node.
-      [Here](: https://awesomeopensource.com/project/rbrahul/Awesome-JSON-Viewer) is the link of the extention 
+      [Here](https://awesomeopensource.com/project/rbrahul/Awesome-JSON-Viewer) is the link of the extention 
       
   # Current problems with the Web App.
   1. My app does not have good design yet.
