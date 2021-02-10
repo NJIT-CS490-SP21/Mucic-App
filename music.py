@@ -3,7 +3,7 @@
 # Class: CS490                          #
 # Section: 002                          #                                    
 # Due Date : 02/08/2021                 #
-# Authon: @Ashutosh_Rana                #
+# Author: @Ashutosh_Rana                #
 # UCID: Ajr72                           #
 # Github: Mindquaker                    #
 # # # # # # # # # # # # # # # # # # # # #
@@ -11,7 +11,7 @@ import requests
 import os
 from dotenv import load_dotenv, find_dotenv
 from random import randint
-from flask import Flask, render_template
+
 
 ############################################# Authorization ####################################################
 load_dotenv(find_dotenv())                                                                                     #
@@ -34,6 +34,8 @@ header = { #authentication header for the get request                           
  'Authorization': 'Bearer {token}'.format(token=auth_token)                                                    #
  }                                                                                                             #
 ################################################################################################################
+
+
 #################################################             Song Info        ###############################################################              
 artists = ["137W8MRPWKqSmrBGDBFSop","3TVXtAsR1Inumwj472S9r4","64KEffDW9EtZ1y2vBYgq8T"] #list of artist ids from spotify                      #              
                                                                                                                                              #              
@@ -44,7 +46,7 @@ params = {                                                                      
             "market" : "US" #parameter in the get request                                                                                    #              
         }                                                                                                                                    #              
                                                                                                                                              #              
-response = requests.get(BASE_URL+selected_artist+"/top-tracks", params = params,headers = header) #requesting data from the ai               #              
+response = requests.get(BASE_URL+selected_artist+"/top-tracks", params = params,headers = header) #requesting data from the api               #              
 song_index = randint(0,len(response.json()["tracks"])-1) #index of the song list to select random song                                       #              
 artist_name =response.json()["tracks"][0]["artists"][0]['name'] #name of the artist                                                          #              
 song_name = response.json()["tracks"][song_index]["name"] #name of the song                                                                  #              

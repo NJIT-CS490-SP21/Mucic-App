@@ -7,12 +7,10 @@
 # UCID: Ajr72                           #
 # Github: Mindquaker                    #
 # # # # # # # # # # # # # # # # # # # # #
-import requests
-import os
-from dotenv import load_dotenv, find_dotenv
-from random import randint
-from flask import Flask, render_template
 import music
+import os
+from flask import Flask, render_template
+
 
 
 
