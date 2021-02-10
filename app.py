@@ -3,7 +3,7 @@
 # Class: CS490                          #
 # Section: 002                          #                                    
 # Due Date : 02/08/2021                 #
-# Authon: @Ashutosh_Rana                #
+# Author: @Ashutosh_Rana                #
 # UCID: Ajr72                           #
 # Github: Mindquaker                    #
 # # # # # # # # # # # # # # # # # # # # #
