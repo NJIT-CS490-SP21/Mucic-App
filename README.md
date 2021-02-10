@@ -1,11 +1,11 @@
 # Project1-ajr72 Spotify Music Web App
-This reository have python, css and html files which will dynamically retrive information about a trop track of a perticular randomly chosen artist from a list of 3 artists using Spotify Track API.
+This reository have python, css and html files which will dynamically retrive information about a trop track of a perticular randomly chosen artist from a list of 3 artists using Spotify Artist API.
 # Technologies used in this Project:
   * **HTML**: To create a structure of the webpage.
   * **CSS**: To give style and design to the webpage.
   * **Python**: It is programing language which will host the Flask Framewrk.
   * **Flask Framework**: to create a server and connect backend and frontend.
-  * **Spotify Track API**: To fetch the information about the tack.
+  * **Spotify Artist API**: To fetch the information about the tack  f a perticuar artist.
 ## HTML
     Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser.
 ## CSS
