@@ -42,6 +42,7 @@ This reository have python, css and html files which will dynamically retrive in
       * export CLIENT_SECRET = your client secret.
   ### In music.py 
   3. We need to authenticate ourself, for that we need to send ```POST``` request in proper format and get the ```access token``` from the response using, the ```client id ``` and ```client secrete``` as shown [here](https://developer.spotify.com/documentation/general/guides/authorization-guide/#client-credentials-flow) or [here](https://stmorse.github.io/journal/spotify-api.html).
+  
   4.Now we need to import libraries we have installed.
   5. Now we have to create a list of our Favourite artists's spotify's ```artist's id```. 
   6. Select a random artist from the list.
@@ -51,7 +52,7 @@ This reository have python, css and html files which will dynamically retrive in
   ### In app.py
   10. Import music.py and Flask library.
   11. Create an app using Flask using ```app = Flask(__name__)``` command.
-  12. Set route to ("/") which the root of the route.
+  12. Set route to ("/") which is the root of the route.
   13. Render these data send dend it to index.html.
   **Don't forget to add .env file to .gitignore to protect your keys. **
  
