@@ -17,7 +17,7 @@
             <img class= "images" src = "{{image_url}}"/>
             
             {% if song_preview_url == None%}  
-                <h2>Sorry, preview is not available!!!</h2>
+                <h2 id = "sorry">Sorry, preview is not available!!!</h2>
             {%else%}
                 <p id = "preview"><a href= "{{song_preview_url}}">Preview your song here</a></p>
                 <audio id ="player"

@@ -54,3 +54,7 @@ body{
   75%{background: linear-gradient(135deg, rgba(218,27,96,1) 0%, rgba(242,98,34,1) 100%);}
   100% {background: linear-gradient(124deg, rgba(195,55,100,1) 0%, rgba(41,39,112,1) 100%);}
 }
+#sorry{
+    color: white;
+    font-family:"Lemonda", cursive;
+}
