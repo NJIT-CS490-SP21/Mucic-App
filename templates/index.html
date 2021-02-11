@@ -2,24 +2,46 @@
 <html>
     
     <head>
+        <Title>Ashutosh's Spotify App</Title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link rel="stylesheet" href={{ url_for('static', filename = 'style.css')}} type="text/css" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Hanalei&family=Lemonada:wght@300&family=Sriracha&display=swap" rel="stylesheet">
     </head>
     <body>
+    <div class = "top">
         
         <div id = "header">
            <strong> <h1>{{song_name}}</h1></strong>
            <h2 id = "artist"> By {{artist_name}}</h2>
         </div>
         
-        <div id="content">
-            <img class= "images" src = "{{image_url}}"/>
-            
-            {% if song_preview_url == None%}  
+    </div>
+    <div class = "middle"  >
+        <img class= "images" src = "{{image_url}}"/>
+        
+    </div>
+    <div class = "bottom">
+        
+        {% if song_preview_url == None%}  
                 <h2 id = "sorry">Sorry, preview is not available!!!</h2>
+                <button class="sorry_btn" id = "btn-4" type = "button" onClick="history.go(0)">Click here for next song</button>
             {%else%}
-                <p id = "preview"><a href= "{{song_preview_url}}">Preview your song here</a></p>
+                <form action={{song_preview_url}}>
+                    <div class = "buttons">
+                        <button   id = "btn-1" type = "submit">Preview the song here</button>
+                        <button id = "btn-3" type  = "button">Get Lyrics</button>
+                        <button  id = "btn-2" type = "button" onClick="history.go(0)">Click here for next song</button>
+                        
+                    </div>
+                  
+                  
+                </form>
+               
                 <audio id ="player"
                     controls
                     src="{{song_preview_url}}">
@@ -27,8 +49,8 @@
                     <code>audio</code> element.
                    </audio><br>
             {%endif%}
-            
-        </div>
+    </div>
+        
         <div id =  "footer">
             <p>  © 2021 Ashutosh Rana</p>
         </div>

@@ -48,12 +48,13 @@ def extract_info():                                                             
                 "market" : "US" #parameter in the get request                                                                                #              
         }                                                                                                                                    #              
                                                                                                                                              #              
-    response = requests.get(BASE_URL+selected_artist+"/top-tracks", params = params,headers = header) #requesting data from the api          #              
+    response = requests.get(BASE_URL+selected_artist+"/top-tracks", params = params,headers = header) #requesting data from the api          #       
+    data = response.json()                                                                                                                   #       
     song_index = randint(0,len(response.json()["tracks"])-1) #index of the song list to select random song                                   #              
-    artist_name =response.json()["tracks"][0]["artists"][0]['name'] #name of the artist                                                      #              
-    song_name = response.json()["tracks"][song_index]["name"] #name of the song                                                              #              
-    song_preview_url =response.json()["tracks"][song_index]["preview_url"] #link for the song                                                #                                                                                         #              #
-    image_url =response.json()["tracks"][song_index]["album"]["images"][0]["url"] #link for the images                                       #
+    artist_name =data["tracks"][0]["artists"][0]['name'] #name of the artist                                                                 #              
+    song_name = data["tracks"][song_index]["name"] #name of the song                                                                         #              
+    song_preview_url =data["tracks"][song_index]["preview_url"] #link for the song                                                           #                                                                                         #              #
+    image_url =data["tracks"][song_index]["album"]["images"][0]["url"] #link for the images                                                  #
     info_dict ={"song_name": song_name,"artist_name": artist_name,"song_preview_url": song_preview_url, "image_url":image_url}               #
     return info_dict                                                                                                                         #
 ##############################################################################################################################################   
