@@ -23,7 +23,8 @@ def posting_song_info_on_the_webpage():                                         
     song_name = info["song_name"],                                                                                                                          #
     artist_name = info["artist_name"],                                                                                                                      #
     song_preview_url = info["song_preview_url"],                                                                                                            #
-    image_url = info["image_url"],                                                                                                                          #
+    image_url = info["image_url"],
+    link_to_lyrics=info["lyrics_url"]#
                                                                                                                                                             #
     )                                                                                                                                                       #
                                                                                                                                                             #

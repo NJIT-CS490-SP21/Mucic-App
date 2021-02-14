@@ -1,5 +1,5 @@
 # # # # # # # # # # # # # # # # # # # # #
-# Project 1: Milestone 1                #
+# Project 1: Milestone 2                #
 # Class: CS490                          #
 # Section: 002                          #                                    
 # Due Date : 02/08/2021                 #
@@ -13,7 +13,7 @@ from dotenv import load_dotenv, find_dotenv
 from random import randint
 
 
-############################################# Authorization ####################################################
+############################################# Spotify Authorization ############################################
 load_dotenv(find_dotenv())                                                                                     #
 AUTH_URL= "https://accounts.spotify.com/api/token" #url for authentication                                     #
                                                                                                                #
@@ -36,6 +36,43 @@ header = { #authentication header for the get request                           
 ################################################################################################################
 
 
+############################################# Getting Genius Lyrics ############################################
+def get_lyrics(song_name,artist_name)  :                                                                       #
+    BASE_URL_GENIUS= "https://api.genius.com/" #url for authentication                                         #
+    search_url = BASE_URL_GENIUS+"search"                                                                      #
+    genius_clientID = os.getenv("GENIUS_CLIENT_ID") #client id from the spotify api                            #
+    genius_clientSecret = os.getenv("GENIUS_CLIENT_SECRET") #client secret from sptify api                     # 
+    auth_token= os.getenv("GENIUS_ACCESS_TOKEN")                                                               #
+    genius_params = {                                                                                               
+    "User-Agent": "CompuServe Classic/1.22",
+    "Accept": "application/json",
+    "Host": "api.genius.com",
+    "q": song_name 
+    }
+    headers = {                                                                                                #
+    "Authorization": "Bearer " + auth_token                                                                    #
+    }                                                                                                          #
+    genius_response = requests.get(search_url, #authentication request                                         #
+    params=genius_params,                                                                                      #    
+    headers = headers                                                                                          #
+    #                                                                                                          #
+    )                                                                                                          # 
+                                                                                                               #
+    genius_response_data = genius_response.json() #Respononse from the api                                     #
+    hits = genius_response_data["response"]["hits"]                                                            #
+    for i in  range(len(hits)):                                                                                #
+        if  artist_name.lower() in hits[i]["result"]["full_title"].lower()  :                                  #
+            link = genius_response_data["response"]["hits"][i]["result"]["url"]                                #
+            break                                                                                              #
+        else:                                                                                                  #
+            link = genius_response_data["response"]["hits"][0]["result"]["url"]                                #
+    return link                                                                                                #
+################################################################################################################
+
+
+
+
+
 #################################################             Song Info        ###############################################################              
                                                                                                                                              #
 def extract_info():                                                                                                                          #
@@ -55,6 +92,11 @@ def extract_info():                                                             
     song_name = data["tracks"][song_index]["name"] #name of the song                                                                         #              
     song_preview_url =data["tracks"][song_index]["preview_url"] #link for the song                                                           #                                                                                         #              #
     image_url =data["tracks"][song_index]["album"]["images"][0]["url"] #link for the images                                                  #
-    info_dict ={"song_name": song_name,"artist_name": artist_name,"song_preview_url": song_preview_url, "image_url":image_url}               #
+    link_to_lyrics = get_lyrics(song_name,artist_name)                                                                                       #
+    info_dict ={"song_name": song_name,"artist_name": artist_name,"song_preview_url": song_preview_url, "image_url":image_url,               #
+                "lyrics_url":link_to_lyrics                                                                                                  #
+    }                                                                                                                                        #
+    print(info_dict)                                                                                                                         #
     return info_dict                                                                                                                         #
 ##############################################################################################################################################   
+extract_info()

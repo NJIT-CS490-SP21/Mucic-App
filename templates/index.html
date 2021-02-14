@@ -16,6 +16,7 @@
     <div class = "top">
         
         <div id = "header">
+            
            <strong> <h1>{{song_name}}</h1></strong>
            <h2 id = "artist"> By {{artist_name}}</h2>
         </div>
@@ -30,11 +31,13 @@
         {% if song_preview_url == None%}  
                 <h2 id = "sorry">Sorry, preview is not available!!!</h2>
                 <button class="sorry_btn" id = "btn-4" type = "button" onClick="history.go(0)">Click here for next song</button>
+                <a href= {{link_to_lyrics}} target="_blank"> <button id = "btn-3" type  = "button">Get Lyrics</button></a>
+            
             {%else%}
                 <form action={{song_preview_url}}>
                     <div class = "buttons">
                         <button   id = "btn-1" type = "submit">Preview the song here</button>
-                        <button id = "btn-3" type  = "button">Get Lyrics</button>
+                       <a href= {{link_to_lyrics}} target="_blank"> <button id = "btn-3" type  = "button">Get Lyrics</button></a>
                         <button  id = "btn-2" type = "button" onClick="history.go(0)">Click here for next song</button>
                         
                     </div>
@@ -49,6 +52,7 @@
                     <code>audio</code> element.
                    </audio><br>
             {%endif%}
+            
     </div>
         
         <div id =  "footer">
