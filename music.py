@@ -76,9 +76,10 @@ def get_lyrics(song_name,artist_name)  :                                        
 #################################################             Song Info        ###############################################################              
                                                                                                                                              #
 def extract_info():                                                                                                                          #
-    artists = ["137W8MRPWKqSmrBGDBFSop","3TVXtAsR1Inumwj472S9r4","64KEffDW9EtZ1y2vBYgq8T"] #list of artist ids from spotify                  #              
+    artists = ["137W8MRPWKqSmrBGDBFSop","3TVXtAsR1Inumwj472S9r4","6eUKZXaKkcviH0Ku9w2n3V","64KEffDW9EtZ1y2vBYgq8T"]                          #                          
+    #list of artist ids from spotify                                                                                                         #              
                                                                                                                                              #              
-    selected_artist = artists[randint(0,2)] #selecting random artist                                                                         #              
+    selected_artist = artists[randint(0,3)] #selecting random artist                                                                         #              
                                                                                                                                              #              
     BASE_URL = "https://api.spotify.com/v1/artists/" #first part of the url that will be used inextracting the data                          #              
     params = {                                                                                                                               #              
