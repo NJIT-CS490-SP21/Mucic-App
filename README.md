@@ -7,7 +7,7 @@ This reository have python, css and html files which will dynamically retrive in
   * **Flask Framework**: To create a server and connect backend and frontend.
   *  **Boorstrap**: To add a navigation bar.
   *  **Google Font API**: To apply different fonts to the web page.
-  * **Spotify Artist API**: To fetch the information about the tack  f a perticuar artist.
+  * **Spotify Artist API**: To fetch the information about the tack  of a perticuar artist.
   * **Genius API**: To fetch lyrics of a song
 ## HTML
     Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser.
@@ -66,7 +66,7 @@ This reository have python, css and html files which will dynamically retrive in
   
   10. Now we need to fetch lyrics of songs using```Genius API```.
   
-  11. We need to create account in Genius api by clicking [here] (https://docs.genius.com/#/getting-started-h1)
+  11. We need to create account in Genius api by clicking [here](https://docs.genius.com/#/getting-started-h1)
   
   12. Now we need to authenticate ourself using the access token provided by Genius Api. [Here](https://docs.genius.com/#/authentication-h1) you can find information. 
   
