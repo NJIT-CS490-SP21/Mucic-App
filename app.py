@@ -25,8 +25,8 @@ def posting_song_info_on_the_webpage():                                         
     artist_name = info["artist_name"],                                                                                                                      #
     song_preview_url = info["song_preview_url"],                                                                                                            #
     image_url = info["image_url"],
-    link_to_lyrics=info["lyrics_url"]#
-                                                                                                                                                            #
+    link_to_lyrics=info["lyrics_url"],#
+    song_url = info["song_url"]                                                                                                                                                       #
     )                                                                                                                                                       #
                                                                                                                                                             #
                                                                                                                                                       #
@@ -40,6 +40,7 @@ def getting_wiz_info():
     artist_name = artist_info["artist_name"],
     total_followers = artist_info["total_followers"],
     image_url = artist_info["image_url"],
+    popularity = artist_info["popularity"],
     song1_name = artist_info["song1"]["song_name"],
     song1_preview_url = artist_info["song1"]["song_preview_url"],
     song1_poster = artist_info["song1"]["song_poster"],
@@ -60,6 +61,7 @@ def getting_drake_info():
     artist_name = artist_info["artist_name"],
     total_followers = artist_info["total_followers"],
     image_url = artist_info["image_url"],
+    popularity = artist_info["popularity"],
     song1_name = artist_info["song1"]["song_name"],
     song1_preview_url = artist_info["song1"]["song_preview_url"],
     song1_poster = artist_info["song1"]["song_poster"],
@@ -80,6 +82,7 @@ def getting_ed_info():
     artist_name = artist_info["artist_name"],
     total_followers = artist_info["total_followers"],
     image_url = artist_info["image_url"],
+    popularity = artist_info["popularity"],
     song1_name = artist_info["song1"]["song_name"],
     song1_preview_url = artist_info["song1"]["song_preview_url"],
     song1_poster = artist_info["song1"]["song_poster"],
@@ -100,6 +103,7 @@ def getting_maroon_info():
     artist_name = artist_info["artist_name"],
     total_followers = artist_info["total_followers"],
     image_url = artist_info["image_url"],
+    popularity = artist_info["popularity"],
     song1_name = artist_info["song1"]["song_name"],
     song1_preview_url = artist_info["song1"]["song_preview_url"],
     song1_poster = artist_info["song1"]["song_poster"],

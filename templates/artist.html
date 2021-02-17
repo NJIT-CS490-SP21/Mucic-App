@@ -1,3 +1,121 @@
-<h1>{{artist_name}}</h1>
-<h1>{{image_url}}</h1>
-<h1>{{total_followers}}</h1>
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <Title>Ashutosh's Spotify App</Title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href={{ url_for('static', filename = 'style2.css')}} type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Hanalei&family=Lemonada:wght@300&family=Sriracha&display=swap" rel="stylesheet">
+    </head>
+    <body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://infinite-dusk-50944.herokuapp.com/">Ashutosh's Spotify App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Artists
+        </a>
+        <div class="dropdown-menu nav-item active" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://infinite-dusk-50944.herokuapp.com/wiz-khalifa">Wiz Khalifa</a>
+          <a class="dropdown-item" href="https://infinite-dusk-50944.herokuapp.com/drake">Drake</a>
+          <a class="dropdown-item" href="https://infinite-dusk-50944.herokuapp.com/ed-sheeran">Ed Sheeran</a>
+          <a class="dropdown-item" href="https://infinite-dusk-50944.herokuapp.com/maroon-5">Maroon 5</a>
+          
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://developer.spotify.com/dashboard/">Create Spotify's Developer Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://docs.genius.com/#/getting-started-h1">Create Genius' Developer Account</a>
+      </li>
+      
+      
+    </form>
+  </div>
+</nav>
+      
+      <div id="artist-info">
+          <h2 id="name">{{artist_name}}</h2>
+          <img class="images" src="{{image_url}}">
+          <div Class="stats">
+            <h2>Followers: {{total_followers}}</h2>
+            <h2>Popularity: {{popularity}} </h2>
+          </div>
+          
+        </div>
+        
+      </div> 
+      
+      <div id="track-list">
+        
+        <div class = "track">
+            <img class="poster"src= "{{song1_poster}}">
+            <h4 class="song">{{song1_name}}</h4>
+            <hr>
+             {% if song1_preview_url == None%}  
+                <h4 id = "sorry">Sorry, preview is not available!!!</h4>
+                <a href= {{song1_lyric_link}} target="_blank"> <button id = "btn-3" type  = "button">Get Lyrics</button></a>
+            {%else%}
+                <audio id ="player"
+                    controls
+                    src="{{song1_preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                 </audio><br>
+                <a href= {{song2_lyric_link}} target="_blank"> <button id = "btn-3" type  = "button">Get Lyrics</button></a>
+            {%endif%}
+        </div>
+        <div class = "track ">
+            <img class="poster"src= "{{song2_poster}}">
+            <h4 class="song">{{song2_name}}</h4>
+            <hr>
+             {% if song2_preview_url == None%}  
+                <h4 id = "sorry">Sorry, preview is not available!!!</h4>
+                <a href= {{song2_lyric_link}} target="_blank"> <button id = "btn-3" type  = "button">Get Lyrics</button></a>
+            {%else%}
+                <audio id ="player"
+                    controls
+                    src="{{song2_preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                 </audio><br>
+                  <a href= {{song2_lyric_link}} target="_blank"> <button id = "btn-3" type  = "button">Get Lyrics</button></a>
+                 
+            {%endif%}
+        </div>
+         <div class = " track">
+            <img class="poster"src= "{{song3_poster}}">
+            <h4 class="song">{{song3_name}}</h4>
+            <hr>
+            {% if song3_preview_url == None%}  
+                <h4 id = "sorry">Sorry, preview is not available!!!</h4>
+                <a href= {{song3_lyric_link}} target="_blank"> <button id = "btn-3" type  = "button">Get Lyrics</button></a>
+            {%else%}
+                <audio id ="player"
+                    controls
+                    src="{{song3_preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                 </audio><br>
+                  <a href= {{song2_lyric_link}} target="_blank"> <button id = "btn-3" type  = "button">Get Lyrics</button></a>
+            {%endif%}
+        </div>
+         
+        
+      </div>
+      
+        </body>
+     
+    
+
+</html>

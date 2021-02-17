@@ -93,11 +93,15 @@ def extract_info():                                                             
     song_name = data["tracks"][song_index]["name"] #name of the song                                                                         #              
     song_preview_url =data["tracks"][song_index]["preview_url"] #link for the song                                                           #                                                                                         #              #
     image_url =data["tracks"][song_index]["album"]["images"][0]["url"] #link for the images                                                  #
-    link_to_lyrics = get_lyrics(song_name,artist_name)                                                                                       #
+    link_to_lyrics = get_lyrics(song_name,artist_name)    
+    uri = data["tracks"][song_index]["artists"][0]["uri"]#
+    song_url = data["tracks"][0]["external_urls"]["spotify"]
+    
     info_dict ={"song_name": song_name,"artist_name": artist_name,"song_preview_url": song_preview_url, "image_url":image_url,               #
-                "lyrics_url":link_to_lyrics                                                                                                  #
+                "lyrics_url":link_to_lyrics, "song_url" : song_url                                                                                        #
     }                                                                                                                                        #
-                                                                                                                             #
+    #
+    
     return info_dict                                                                                                                         #
 ############################################################################################################################################## 
 
@@ -139,10 +143,12 @@ def get_artist_info(artist_name):
                 "song_poster":song_response_data["tracks"][i]["album"]["images"][0]["url"],
                 "lyrics_url" : get_lyrics(song_response_data["tracks"][i]["name"],artist_name)
                 
+                
             }
     artist_info = {
         "artist_name" :song_response_data["tracks"][0]["artists"][0]['name'],
         "total_followers":total_followers,
+        "popularity" : song_response_data["tracks"][i]["popularity"],
         "image_url" : image_url,
         "song1" : top_songs["song1"],
         "song2" : top_songs["song2"],
