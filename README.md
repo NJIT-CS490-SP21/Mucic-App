@@ -4,8 +4,11 @@ This reository have python, css and html files which will dynamically retrive in
   * **HTML**: To create a structure of the webpage.
   * **CSS**: To give style and design to the webpage.
   * **Python**: It is programing language which will host the Flask Framewrk.
-  * **Flask Framework**: to create a server and connect backend and frontend.
+  * **Flask Framework**: To create a server and connect backend and frontend.
+  *  **Boorstrap**: To add a navigation bar.
+  *  **Google Font API**: To apply different fonts to the web page.
   * **Spotify Artist API**: To fetch the information about the tack  f a perticuar artist.
+  * **Genius API**: To fetch lyrics of a song
 ## HTML
     Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser.
 ## CSS
@@ -15,7 +18,13 @@ This reository have python, css and html files which will dynamically retrive in
 ## Flask
     Flask is a lightweight WSGI web application framework which will help use to connect our backend with frontend created with html and css.
 ## Spotify Artist API
-    It is a API Provided by Spotify INC, A music providing company to retrive  infromation about a track in JSON format.
+    It is an API Provided by Spotify INC, A music providing company to retrive  infromation about a track in JSON format.
+## Genius API: 
+    It is an API Provided by Genius, a company which provides lyrics of songs and other details about the song. 
+## Bootstrap:
+    Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. 
+## Google Fonts Api:
+    Google Font API is a web service that supports high-quality open source font files that can be used on your web designs easily.
 # Lirbaries to install:
   1.  ```Requests```: to request data from the api.
      
@@ -48,12 +57,24 @@ This reository have python, css and html files which will dynamically retrive in
   6. Select a random artist from the list.
   7. Use ```Spotify's Artist Api``` to fetch data about the artist and song.
   8. Send a ```GET``` request with proper endpoints, parameters and headers.
-  9. After geetting the response back in ```JSON``` format we can retrieve information like the song's name, artist, link for the son's preview and link for the poster of the song.
+  9. After geetting the response back in ```JSON``` format we can retrieve information like the song's name, artist, link for the song's preview and link for the poster of the song.
+  10. Now we need to fetch lyrics of songs using```Genius API```.
+  11. We need to create account in Genius api by clicking [here] (https://docs.genius.com/#/getting-started-h1)
+  12. Now we need to authenticate ourself using the access token provided by Genius Api. [Here](https://docs.genius.com/#/authentication-h1) you can find information. 
+  13. We can hide our ```Client Secret```,```Client ID``` and ```Access Token``` in ```.env``` file as we did in spotify api.
+  14. Now we have to send a get request with proper headers and parameters.
+  15. We are using ```Search``` endpoint of the Genius Api. [Here](https://docs.genius.com/#search-h2) you can find the documentation.
+  16. Here we are just fetching the url for the lyrics of a song so here we are done with the Genius Api.
+  17. Now we are fetching data about an artist using Spotify Artist Api.
+  18. We need to send to get requests with different endpoints to get information about artist and artist's top three songs.
+  19. Now we have to extract data about the artists and his/her top three songs.
+  20. Now we need to create a dictionar about these data and return it.
   ### In app.py
-  10. Import music.py and Flask library.
-  11. Create an app using Flask using ```app = Flask(__name__)``` command.
-  12. Set route to ("/") which is the root of the route.
-  13. Render these data send dend it to index.html.
+  21. Import music.py and Flask library.
+  22. Create an app using Flask using ```app = Flask(__name__)``` command.
+  23. Set route to ("/") which is the root of the route.
+  24. Render these data send dend it to index.html.
+  25. Now we need to create route ```@app.route("/artist_name")``` for every artist and render the data about the artist and his/her top three songs.
   **Don't forget to add .env file to .gitignore to protect your keys. **
  
  
@@ -72,5 +93,5 @@ This reository have python, css and html files which will dynamically retrive in
   2. The webpage is static it does not have other functionality other than playing previews of songs.
   3. CSS of the webpages needs to improve and html structure should also be improved.
   # What I would do to improve my future projects.
-   I would learn different technologies. I will practice a lot to use the technologies I have learned. I will ge help from professor, TAs and my peers. I will also do my own research and try to find solution by myself.
+   I would learn different technologies. I will practice a lot to use the technologies I have learned. I will ge help from professor, TAs and my peers. I will also do my own research and try to find solution by myself. I would Also Improve the UI of my app after I learn react.js.
 
