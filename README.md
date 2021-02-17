@@ -74,7 +74,7 @@ This reository have python, css and html files which will dynamically retrive in
   
   14. Now we have to send a get request with proper headers and parameters.
   
-  15. We are using ```Search``` endpoint of the Genius Api. [Here](https://docs.genius.com/#search-h2) you can find the documentation.
+  15. We are using ```Search``` endpoint of the Genius Api .[Here](https://docs.genius.com/#search-h2) you can find the documentation.
   
   16. Here we are just fetching the url for the lyrics of a song so here we are done with the Genius Api.
   
@@ -103,9 +103,10 @@ This reository have python, css and html files which will dynamically retrive in
   1. I had an issue with the loging in ot the github via terminal. It was not granting me the permission to loging even if I entered the correct username and password.
       **Solution**: After few hours of research on internet and with the help of fellow students on slacks I found out the solution. I disable the two way authentication feature and it solved the issue and then I generated a ssh key in my terminal and added it to my github account.
   2. I had an isuue when pushing the commit. After adding my files and commining the changes whenev I tried to push changes github wad not letting me to push the changes.
+      
       **Solution** : The issue was,  that while generating ssh key and adding to the github I put the wrong repository name. To solve this issue first I remove the original remote orign and than I again added remote origin with the correct repository name. And then I followed the step which I used to initialize the git that i used on first hand.
   3. Whenever I recieved the response in the json format, the response was so messy.
-      Solution: I used a chrome extention called ```Awesome JSON Viewer```. So I needed to copy the response which I recieved from the GET request in the text box. And then it will process the resonse and butified it. It was very easy to get a parent node just by clicking the child node.
+      **Solution** : I used a chrome extention called ```Awesome JSON Viewer```. So I needed to copy the response which I recieved from the GET request in the text box. And then it will process the resonse and butified it. It was very easy to get a parent node just by clicking the child node.
       [Here](https://awesomeopensource.com/project/rbrahul/Awesome-JSON-Viewer) is the link of the extention 
       
   # Current problems with the Web App.
