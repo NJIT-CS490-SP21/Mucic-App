@@ -53,21 +53,37 @@ This reository have python, css and html files which will dynamically retrive in
   3. We need to authenticate ourself, for that we need to send ```POST``` request in proper format and get the ```access token``` from the response using, the ```client id ``` and ```client secrete``` as shown [here](https://developer.spotify.com/documentation/general/guides/authorization-guide/#client-credentials-flow) or [here](https://stmorse.github.io/journal/spotify-api.html).
   
   4.Now we need to import libraries we have installed.
+  
   5. Now we have to create a list of our Favourite artists's spotify's ```artist's id```. 
+  
   6. Select a random artist from the list.
+  
   7. Use ```Spotify's Artist Api``` to fetch data about the artist and song.
+  
   8. Send a ```GET``` request with proper endpoints, parameters and headers.
+  
   9. After geetting the response back in ```JSON``` format we can retrieve information like the song's name, artist, link for the song's preview and link for the poster of the song.
+  
   10. Now we need to fetch lyrics of songs using```Genius API```.
+  
   11. We need to create account in Genius api by clicking [here] (https://docs.genius.com/#/getting-started-h1)
+  
   12. Now we need to authenticate ourself using the access token provided by Genius Api. [Here](https://docs.genius.com/#/authentication-h1) you can find information. 
+  
   13. We can hide our ```Client Secret```,```Client ID``` and ```Access Token``` in ```.env``` file as we did in spotify api.
+  
   14. Now we have to send a get request with proper headers and parameters.
+  
   15. We are using ```Search``` endpoint of the Genius Api. [Here](https://docs.genius.com/#search-h2) you can find the documentation.
+  
   16. Here we are just fetching the url for the lyrics of a song so here we are done with the Genius Api.
+  
   17. Now we are fetching data about an artist using Spotify Artist Api.
+  
   18. We need to send to get requests with different endpoints to get information about artist and artist's top three songs.
+  
   19. Now we have to extract data about the artists and his/her top three songs.
+  
   20. Now we need to create a dictionar about these data and return it.
   ### In app.py
   21. Import music.py and Flask library.
@@ -76,6 +92,10 @@ This reository have python, css and html files which will dynamically retrive in
   24. Render these data send dend it to index.html.
   25. Now we need to create route ```@app.route("/artist_name")``` for every artist and render the data about the artist and his/her top three songs.
   **Don't forget to add .env file to .gitignore to protect your keys. **
+  
+  # Deploying app on Heroku
+  1. First of all we need to create our free account on ```Heroku```.
+  2. We can follow steps as shown in [this repository](https://github.com/NJIT-CS490-SP21/lect6-demo-heroku) to deploy our app.
  
  
  
