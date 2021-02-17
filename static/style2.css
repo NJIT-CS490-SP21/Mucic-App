@@ -71,8 +71,8 @@ body{
 }
 .track{
     background-color: white;
-    width: 22rem;
-    height: 30rem;
+    width: 24rem;
+    height: 32rem;
     border-radius: 1.125rem;
     transition: transform .2s;
     margin-top:10%;
@@ -83,7 +83,7 @@ body{
 .poster{
     position: relative;
     height: 18.75rem;
-    width: 22rem;
+    width: 24rem;
     border-radius: 1.125rem 1.125rem 0 0;
 }
 
@@ -101,7 +101,8 @@ body{
 }
 .song{
     text-align:center;
+    font-size: 1.5rem;
 }
 audio{
-    margin-left:15px;
+    margin-left:25px;
 }
